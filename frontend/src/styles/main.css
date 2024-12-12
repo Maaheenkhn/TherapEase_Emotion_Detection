@@ -1,0 +1,54 @@
+/* Main.css */
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #e0f4f6; /* Light background */
+  position: relative; /* To position the button correctly */
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px; /* Increased width */
+  height: 500px; /* Increased height */
+  background-color: rgba(2, 183, 255, 0.367); /* Semi-transparent blue background */
+  border-radius: 0px; /* Slightly rounded corners */
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Added subtle shadow for effect */
+}
+
+.logo {
+  width: 150px; /* Increased image size */
+  height: auto;
+  margin-bottom: 20px; /* More spacing below image */
+}
+
+.app-title {
+  font-size: 36px; /* Larger font size for title */
+  color: white;
+  font-weight: bold;
+}
+
+.continue-button {
+  position: absolute;
+  bottom: 10px; /* Adjusted positioning */
+  right: 20px; /* Adjusted positioning */
+  padding: 15px 30px; /* Larger button */
+  font-size: 18px; /* Larger font size */
+  background-color: #1588bd;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded button */
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: #0f6085;
+}

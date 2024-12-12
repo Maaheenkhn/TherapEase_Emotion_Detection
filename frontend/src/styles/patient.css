@@ -1,0 +1,36 @@
+/* General container for the patient home page */
+.patient-home-container {
+    background-color: #f7fafc; /* Light background for the page */
+    min-height: 100vh; /* Ensure it takes full height */
+    display: flex; /* Use Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 2rem; /* Space around the content */
+  }
+  
+  /* Styling for the welcome card */
+  .welcome-card {
+    background-color: white; /* White background for the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the card */
+    padding: 3rem; /* Add padding inside the card */
+    text-align: center; /* Center text inside the card */
+    width: 80%; /* Make card responsive */
+    max-width: 500px; /* Ensure it doesn't get too wide */
+  }
+  
+  /* Title inside the welcome card */
+  .welcome-card h3 {
+    font-size: 2rem; /* Larger text for the title */
+    font-weight: 600; /* Bold title */
+    color: #374151; /* Dark color for the title */
+    margin-bottom: 1.5rem; /* Space below the title */
+  }
+  
+  /* Description inside the welcome card */
+  .welcome-card p {
+    font-size: 1.125rem; /* Slightly smaller text for the description */
+    color: #4a5568; /* Lighter color for the paragraph */
+    margin-bottom: 2rem; /* Space below the paragraph */
+  }
+  
