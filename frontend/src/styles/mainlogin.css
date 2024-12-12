@@ -1,0 +1,72 @@
+/* MainLogin.css */
+.main-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e0f4f6; /* Light background */
+}
+
+.main-login-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%; /* Adjust width for center alignment */
+  gap: 20px; /* Gap between rectangles */
+}
+
+.login-rectangle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the text is at the top and button-container at the bottom */
+  align-items: center;
+  width: 35%; /* Adjust width of each rectangle */
+  height: 500px; /* Height is double the width-to-height ratio */
+  padding: 20px;
+  background-color: rgba(2, 204, 255, 0.295); /* Blue background with 70% transparency */
+  border-radius: 0px;
+}
+
+.rectangle-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Spacing between title and other content */
+  text-align: center;
+  flex-shrink: 0; /* Prevents shrinking of title */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+  width: 60%;
+  margin-top: auto; /* Pushes button container to the bottom */
+  padding-bottom: 30px; /* Adds padding at the bottom to push buttons up */
+
+}
+
+.login-button {
+  width: 100%; /* Button width */
+  margin: 15px 0; /* Spacing between buttons */
+  padding: 10px;
+  font-size: 20px;
+  background-color: #1f819c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents shrinking of buttons */
+}
+
+.login-button:hover {
+  background-color: #196378;
+}
+
+.patient-rectangle .login-button {
+  background-color: #1f819c;
+}
+
+.patient-rectangle .login-button:hover {
+  background-color: #196378;
+}
