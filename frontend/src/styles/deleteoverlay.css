@@ -1,0 +1,93 @@
+/* Overlay container */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 130, 129, 0.2); /* 218281 with 20% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure overlay is on top */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially invisible */
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  }
+  
+  /* Overlay is visible when `isOpen` class is applied */
+  .overlay.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* The actual modal (confirmation box) */
+  .overlay-content {
+    background-color: #F5FFFF; /* Light background color for the modal */
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    text-align: center;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modal Title */
+  .overlay-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Modal Text */
+  .overlay-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Warning Icon */
+  .overlay-content .warning-icon {
+    font-size: 30px;
+    color: #EB6565; /* Red color for warning icon */
+    margin-bottom: 20px;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Evenly space the buttons */
+    width: 100%;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+  }
+  
+  /* Confirm and Cancel buttons */
+  .overlay-content .button-container button {
+    padding: 12px 25px; /* Increased padding for better button size */
+    font-size: 1rem;
+    border-radius: 15px; /* More rounded corners */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 45%; /* Ensure buttons are side by side and of equal width */
+  }
+  
+  /* Cancel button */
+  .overlay-content .button-container button.cancel-btn {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Confirm button */
+  .overlay-content .button-container button.confirm-btn {
+    background-color: #ff4d4d; /* Red background for delete */
+    color: white;
+  }
+  
+  /* Hover effect for both buttons */
+  .overlay-content .button-container button:hover {
+    opacity: 0.8;
+  }
+  

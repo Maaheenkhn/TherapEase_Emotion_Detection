@@ -1,54 +1,57 @@
 .therapist-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #d4d3d3;
-  }
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ecf6f6;
+}
 
-  
 /* -------------login/signup--------------- */
 
-  
 /* Container for both the login and signup forms */
+.patient-page-container,
 .login-container,
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #e0f4f6; /* Light background */
+  background-color: #ecf6f6; /* Light background */
 }
 
 /* Login card style */
 .login-card {
   width: 60%;
   max-width: 500px;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
+  background-color: #B7E0E2; /* Updated card background color */
+  padding: 4rem 1.5rem 4rem 1.5rem; /* Reduced padding for more space */
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 450px; /* Height suitable for login form */
+  height: auto; /* Allow card to adjust based on content */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  padding-left: 5.5rem; /* Ensure proper padding on left */
+  padding-right: 5.5rem; /* Ensure proper padding on right */
 }
 
 /* Signup card style */
 .signup-card {
   width: 60%;
   max-width: 500px;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
+  background-color: #B7E0E2; /* Updated card background color */
+  padding: 2rem 1.5rem; /* Reduced padding for more space */
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 700px; /* Taller height for Signup form */
+  height: auto; /* Allow card to adjust based on content */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  padding-left: 1.5rem; /* Ensure proper padding on left */
+  padding-right: 1.5rem; /* Ensure proper padding on right */
 }
 
 /* Body content inside the cards */
@@ -61,61 +64,64 @@
 
 /* Title for both forms (Login/Signup) */
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem; /* Increased title size */
   font-weight: 500;
-  color: #374151; /* Darker text */
-  padding-bottom: 2rem;
-  margin-bottom: 1.25rem;
+  color: #595959 !important; /* Updated heading text color */
+  padding-bottom: 2.5rem; /* Reduced space for a better layout */
+  margin-bottom: 1rem;
 }
 
 /* Styling for individual form elements */
 .form-group {
   width: 100%;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem; /* Increased margin for better spacing */
 }
 
 .form-control {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem; /* Increased padding to make the text fields larger */
+  font-size: 1.125rem; /* Increased font size */
   border: 2px solid #e2e8f0;
-  border-radius: 0.375rem;
-  font-size: 1rem;
+  border-radius: 0.5rem; /* Larger border radius */
   color: #4a5568;
   background-color: #f9fafb;
   transition: border-color 0.2s ease-in-out;
 }
 
+/* Focused state of the form control */
 .form-control:focus {
-  border-color: #4299e1; /* Focus color */
+  border-color: #39b5b5; /* Focus color */
   outline: none;
 }
 
 /* Error message styling */
 .error {
-  color: #e53e3e; /* Red for error messages */
-  font-size: 0.875rem;
+  color: #7b1b1b; /* Red for error messages */
+  font-size: 1rem; /* Slightly larger error message text */
   margin-top: 0.25rem;
 }
 
 /* Submit button styling */
 .btn-submit {
   width: 100%;
-  padding: 1rem;
-  background-color: #3182ce;
-  color: white;
-  font-size: 1rem;
+  padding: 1.5rem; /* Increased padding for a larger button */
+  background-color: #2e9292; /* Updated button background color */
+  color: #ecf6f6; /* Updated button text color */
+  font-size: 1.25rem; /* Increased font size */
   border: none;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem; /* Larger border radius for rounder corners */
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
+/* Button hover effect */
 .btn-submit:hover {
-  background-color: #2b6cb0;
+  background-color: #2c7e7e; /* Darker shade on hover */
 }
 
+/* Button active state */
 .btn-submit:active {
-  background-color: #2c5282;
+  background-color: #2b6f6f; /* Darker shade on active click */
 }
 
 /* Styling for links (if any in the signup form) */
@@ -126,7 +132,7 @@
 }
 
 .signup-link a {
-  color: #3182ce;
+  color: #2b6f6f;
   font-weight: 500;
   text-decoration: none;
 }
@@ -135,124 +141,195 @@
   text-decoration: underline;
 }
 
-
 /* Adjust form controls (text fields) inside option cards */
 .option-card .form-control {
   width: 100%; /* Ensures the form fields are full width inside option cards */
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 0.375rem;
+  padding: 1.5rem; /* Increased padding for bigger text fields */
+  font-size: 1.125rem; /* Increased font size */
+  border-radius: 0.5rem; /* Larger border radius */
 }
+
 
 /* -------------home--------------- */
 
 
 
-/* General container for the therapist home page */
-.therapist-home-container {
-  background-color: #e0f4f6; /* Light background for the page */
-  min-height: 95vh;
-  padding: 2rem;
+/* Flexbox Layouts */
+/* .therapist-home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Ensure the space is distributed correctly */
-  padding-bottom: 3rem; /* Reduced bottom padding */
-}
+  align-items: center;
+} */
+  /* justify-content: center; */
+  /* align-items: center; */
 
-/* Title styling */
-.therapist-home-container h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #374151; /* Dark color for title */
-  text-align: center;
-  margin-bottom: 4rem;
-}
 
-/* Adjustments for the option cards */
-.option-card {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around cards */
-  padding: 3rem; /* Increased padding for larger content area */
-  width: 320px; /* Increased width for a larger card */
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation */
-}
-
-/* Move cards lower by adjusting the container padding/margin */
-.options-container {
+.therapist-home-container {
   display: flex;
-  justify-content: center; /* Distribute cards evenly */
-  flex-wrap: wrap; /* Allow the cards to wrap for responsiveness */
-  gap: 8rem; /* Increased space between cards */
-  margin-top: 25rem; /* Add top margin to move the cards lower */
+  height: 100vh;
+  background-color: #ecf6f6; /* Light background */
 }
 
-/* Hover effect for option cards */
-.option-card:hover {
-  transform: translateY(-10px); /* Slight upward movement */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+.therapist-home {
+  width: 100%;
+  height: 30%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
 }
 
-/* Card title (h3) styling */
-.option-card h3 {
-  font-size: 1.75rem; /* Increased font size for titles */
-  font-weight: 500;
-  color: #2d3748; /* Dark text for headings */
-  margin-bottom: 1.5rem; /* Increased margin below title */
+/* Therapist Name Card */
+.therapist-name-card {
+  background-color: #2d9796; /* Color */
+  color: white;
+  width: 60%;
+  height:100%;
+  padding: 2rem;
+  padding-top: 6rem;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-right: 1.5rem;
+  text-align: center;
 }
 
-/* Description paragraph styling inside each card */
-.option-card p {
-  font-size: 1.25rem; /* Slightly larger text for descriptions */
-  color: #4a5568; /* Slightly lighter text */
-  margin-bottom: 1.75rem;
+.therapist-name-card h1 {
+  font-size: 2.5rem;
+  /* margin-bottom: 10px; */
 }
 
-/* Button styling inside the cards */
-.option-card .btn {
-  width: 100%; /* Make the button span the width of the card */
-  padding: 1.25rem; /* Increased button padding for larger clickable area */
-  font-size: 1.25rem; /* Larger font for buttons */
-  border-radius: 0.375rem;
+.therapist-name-card h2 {
+  font-size: 1.5rem;
+}
+
+/* Therapist Profile Card */
+.therapist-profile-card {
+  background-color: #e0f0f0; /* Color */
+  width: 30%;
+  /* padding: 20px; */
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile Header */
+.profile-header {
+  background-color: #2d9796; /* Same color as the card */
+  padding: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top-left-radius: 25px;  /* Top left corner */
+  border-top-right-radius: 25px; /* Top right corner */
+}
+
+.profile-header h3 {
+  font-size: 1.8rem;
+}
+
+/* Edit Button */
+.edit-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: color 0.3s ease;
 }
-/* Primary button styling */
-.option-card .btn-primary {
-  background-color: #1f819c; /* Blue */
+
+.edit-button:hover {
+  color: #c1f7f7; /* Hover effect */
+}
+
+/* Profile Details */
+.profile-details {
+  /* background-color: #e0f0f0; Light gray background */
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.profile-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.therapist-name {
+  color: #333; /* Darker text color */
+  font-size: 1.2rem;
+}
+
+
+
+/* -------------patients--------------- */
+
+.patient-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.patients-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* // maxWidth: '350px', */
+}
+
+/* Patient Heading Style */
+.patient-heading {
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Ensure it takes the full width */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Heading Style */
+.patient-heading h2 {
+  margin: 0;
+  font-size: 2rem; /* Larger text size for the heading */
+  color: #333;
+}
+
+/* Add Patient Button Style */
+.add-patient-btn {
+  background-color: #218281; /* Green color */
   color: white;
-  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  border: none; /* Remove default border */
+
 }
 
-.option-card .btn-primary:hover {
-  background-color: #196378; /* Darker blue on hover */
+.add-patient-btn:hover {
+  background-color: #1c6e5f; /* Darker green on hover */
 }
 
-.option-card .btn-danger {
-  background-color: #1f819c; /* Red */
-  color: white;
-  border: none;
+.add-patient-btn svg {
+  font-size: 20px; /* Size for the plus icon */
 }
-
-.option-card .btn-danger:hover {
-  background-color: #196378; /* Darker red on hover */
-}
-
-.option-card .btn-success {
-  background-color: #1f819c; /* Green */
-  color: white;
-  border: none;
-}
-
-.option-card .btn-success:hover {
-  background-color: #196378; /* Darker green on hover */
-}
-
-
 
 
 /* -------------delete--------------- */
+
 /* General container for the delete patient page */
 .delete-container {
   background-color: #e0f4f6; /* Light background */
@@ -443,20 +520,24 @@
   margin-top: 0.5rem;
 }
 
-/* Submit button styling */
 .btn-submit {
-  background-color: #3182ce; /* Blue background */
-  color: white;
-  padding: 1rem;
   width: 100%;
-  font-size: 1.25rem;
-  border-radius: 0.375rem;
+  padding: 1rem;
+  background-color: #2e9292; /* Updated button background color */
+  color: #ecf6f6; /* Updated button text color */
+  font-size: 1rem;
   border: none;
+  border-radius: 0.375rem; /* Adjusts roundness of the button */
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .btn-submit:hover {
-  background-color: #2b6cb0; /* Darker blue on hover */
+  background-color: #2c7e7e; /* Darker shade on hover */
+}
+
+.btn-submit:active {
+  background-color: #2b6f6f; /* Darker shade on active click */
 }
 
 /* Styling for patient information */

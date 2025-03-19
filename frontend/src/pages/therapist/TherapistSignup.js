@@ -196,6 +196,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateTherapistSignup } from '../../components/validations/TherapistSignupValidation.js';
 import '../../styles/therapist.css';
+import Wave from '../../components/Wave'; // Import Wave component
+
 
 /**
  * Therapist signup page for registration.
@@ -230,40 +232,40 @@ const TherapistSignup = () => {
     console.log('Signup data:', formData);
 
 
-    navigate('/therapist/login'); //temp
-
     // Placeholder for API call to register therapist
-    // try {
-    //   const response = await fetch('/api/therapist/signup', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(formData),
-    //   });
-    //   const data = await response.json();
-    //   if (response.ok) {
-    //     navigate('/therapist/login');
-    //   } else {
-    //     setErrors({ apiError: data.message });
-    //   }
-    // } catch (error) {
-    //   console.error('Signup error:', error);
-    //   setErrors({ apiError: 'Something went wrong. Please try again.' });
-    // }
+    try {
+      const response = await fetch('http://localhost:5000/api/therapist/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        navigate('/therapist/login');
+      } else {
+        setErrors({ apiError: data.message });
+      }
+    } catch (error) {
+      console.error('Signup error:', error);
+      setErrors({ apiError: 'Something went wrong. Please try again.' });
+    }
   };
 
   return (
     <div className="signup-container">
+      <Wave />
       <div className="signup-card">
         <div className="card-body">
           <h2 className="card-title">Therapist Signup</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>Name:</label>
+              {/* <label>Name:</label> */}
               <input
                 type="text"
                 name="name"
+                placeholder="Enter Name"
                 value={formData.name}
                 onChange={handleChange}
                 className="form-control"
@@ -272,22 +274,25 @@ const TherapistSignup = () => {
             </div>
 
             <div className="form-group">
-              <label>Email:</label>
+              {/* <label>Email:</label> */}
               <input
                 type="email"
                 name="email"
+                placeholder="Enter email"
                 value={formData.email}
                 onChange={handleChange}
                 className="form-control"
               />
+              
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
 
             <div className="form-group">
-              <label>Password:</label>
+              {/* <label>Password:</label> */}
               <input
                 type="password"
                 name="password"
+                placeholder="Enter Password"
                 value={formData.password}
                 onChange={handleChange}
                 className="form-control"
@@ -296,10 +301,11 @@ const TherapistSignup = () => {
             </div>
 
             <div className="form-group">
-              <label>Confirm Password:</label>
+              {/* <label>Confirm Password:</label> */}
               <input
                 type="password"
                 name="confirmPassword"
+                placeholder="Confirm Password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 className="form-control"

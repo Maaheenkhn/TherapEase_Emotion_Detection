@@ -1,6 +1,6 @@
 /* General container for the patient home page */
 .patient-home-container {
-    background-color: #f7fafc; /* Light background for the page */
+    background-color: #e7f3f3; /* Light background for the page */
     min-height: 100vh; /* Ensure it takes full height */
     display: flex; /* Use Flexbox to center content */
     justify-content: center; /* Center horizontally */
@@ -32,5 +32,135 @@
     font-size: 1.125rem; /* Slightly smaller text for the description */
     color: #4a5568; /* Lighter color for the paragraph */
     margin-bottom: 2rem; /* Space below the paragraph */
+  }
+  
+
+
+  
+  /* Button styling */
+  .button {
+    padding: 15px 30px; /* Increase the padding to make buttons bigger */
+    background-color: #3B8B8B; /* Button color */
+    color: #EBF3F3; /* Text color for the buttons */
+    border: none;
+    border-radius: 30px; /* Increase border-radius to make buttons rounder */
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px; /* Larger text for the button */
+    text-align: center; /* Ensures text is centered */
+  }
+  
+    /* Container for the buttons */
+    .buttons-container {
+      display: flex; /* Enable flexbox */
+      flex-direction: column; /* Stack buttons vertically */
+      justify-content: center; /* Center buttons vertically within the container */
+      align-items: center; /* Center buttons horizontally within the container */
+      height: 100%; /* Make sure the container takes up the full height */
+    }
+  
+  /* Hover effect for buttons */
+  .button:hover {
+    background-color: #337777; /* Hover effect for button */
+    color: white; /* White text when hovering */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------- patient component --------------- */
+
+
+  .patient-component-container {
+    background-color: #e0f0f0;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    margin-top: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+    width: 70vw;
+    align-items: center;
+    justify-content: space-between; /* Space out the content */
+  }
+  
+  .icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+    /* width: 30px; */
+    align-items: center; /* Center the icons vertically */
+    gap: 15px; /* Add space between the edit and delete icons */
+  }
+  
+  /* .icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .icon:hover {
+    color: #000; /* Darker color on hover 
+  } */
+  
+  
+  .icon {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .icon:hover {
+    opacity: 0.7; /* Add opacity change when hovered */
+  }
+  
+  .edit-icon {
+    color: #2f8788; /* Green color for the edit icon */
+  }
+  
+  .delete-icon {
+    color: #EB6565; /* Red color for the delete icon */
+  }
+  
+  
+  .patient-details {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow it to take available space */
+  }
+  
+  .patient-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 15px; /* More space between icon and text */
+  }
+  
+  .patient-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .patient-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .patient-number {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
   }
   

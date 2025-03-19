@@ -1,0 +1,92 @@
+/* Container for the whole card */
+.flip-card {
+    width: 285px; /* Set width of the card */
+    height: 500px; /* Set height of the card to make it portrait */
+    perspective: 1500px; /* Creates a 3D space for the flip with a larger value */
+    border-radius: 15px; /* Rounded corners for the entire card */
+    overflow: visible; /* Allow the content outside the card bounds to be visible during flip */
+    display: flex; /* Flex display to align content */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* The inner part of the card */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Smooth flip transition */
+    transform-style: preserve-3d; /* Enables 3D transformations */
+    border-radius: 15px; /* Rounded corners for the inner card */
+    transform-origin: center; /* Ensures the card flips around its center */
+  }
+  
+  /* The front of the card */
+  .flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #9DD6D6; /* Light teal color for the front */
+    border-radius: 15px; /* Rounded corners for the front */
+    color: #656565; /* Text color for the front of the card */
+  }
+  
+  /* The back of the card */
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back face when flipped */
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    gap: 10px; /* Space between buttons */
+    transform: rotateY(180deg); /* Rotate the back side 180 degrees */
+    background-color: #9DD6D6; /* Light teal color for the back */
+    border-radius: 15px; /* Rounded corners for the back */
+    
+    /* Linear gradient for the back card */
+    background-image: linear-gradient(to top, rgba(45, 151, 150, 0.2), rgba(45, 151, 150, 0));
+  }
+  
+  /* Hover effect to flip the card */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Rotate the inner content by 180 degrees on hover */
+  }
+  
+  /* Button styling */
+  .button {
+    padding: 15px 30px; /* Increase the padding to make buttons bigger */
+    background-color: #3B8B8B; /* Button color */
+    color: #EBF3F3; /* Text color for the buttons */
+    border: none;
+    border-radius: 30px; /* Increase border-radius to make buttons rounder */
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px; /* Larger text for the button */
+    text-align: center; /* Ensures text is centered */
+    width: 120%; /* Set width to 120% of the parent container */
+  }
+  
+    /* Container for the buttons */
+    .buttons-container {
+      display: flex; /* Enable flexbox */
+      flex-direction: column; /* Stack buttons vertically */
+      justify-content: center; /* Center buttons vertically within the container */
+      align-items: center; /* Center buttons horizontally within the container */
+      height: 100%; /* Make sure the container takes up the full height */
+      gap: 10px; /* Add gap between the buttons */
+    }
+  
+  /* Hover effect for buttons */
+  .button:hover {
+    background-color: #337777; /* Hover effect for button */
+    color: white; /* White text when hovering */
+  }
+  

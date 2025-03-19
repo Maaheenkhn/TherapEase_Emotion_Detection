@@ -1,0 +1,48 @@
+/* Navbar styling */
+.navbar {
+    width: 300px;
+    height: 100vh;
+    background-color: #B7E0E2;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed; /*Fix the navbar to the left of the screen */
+    left: 0; /* Align it to the leftmost edge */
+    top: 0; /* Align it to the top */
+    /* z-index: 100; Ensure it stays on top of other content */
+    border-top-right-radius: 20px; /* Round the top-left corner */
+    border-bottom-right-radius: 20px; /* Round the bottom-left corner */
+  }
+  
+/* Logo styling */
+.logo {
+margin-top: 20px; /* Space between the logo and the top */
+margin-bottom: 20px; /* Space between the logo and the first nav item */
+/* margin-left: 20px; Space between the logo and the first nav item */
+}
+
+/* NavItem styling */
+.nav-item {
+padding: 14px 30px; /* Add padding of 12px to top/bottom and 30px to left/right  */
+width: 75%;
+cursor: pointer;
+color: #329595; /* Text color is black by default */
+font-size: 22px;
+/* text-align: center; */
+transition: background-color 0.3s, color 0.3s;
+border-radius: 10px; /* Rounded corners */
+margin: 5px 10px; /* Add margin of 0px to top/bottom and 20px to left/right */
+}
+
+/* Hover effect */
+.nav-item:hover {
+background-color: #9fd8db; /* Change background to red on hover */
+color: #329595; /* Keep text black on hover */
+}
+
+/* Selected state */
+.nav-item.selected {
+background-color: #329595;
+color: #e7f3f3; /* Text color is white when selected */
+  }
+  

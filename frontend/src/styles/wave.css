@@ -1,0 +1,47 @@
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url('/src/wave2.png'); /* Referencing image from public folder */
+    background-size: 1000px 200px;
+    background-repeat: repeat-x;
+  }
+  
+  .wave.wave1 {
+    animation: waveAnimation 20s linear infinite; /* Apply animation */
+    /* z-index: 1000; */
+    opacity: 1;
+    animation-delay: 0s;
+    top: 0;
+  }
+  
+  /* Animation for the wave */
+  @keyframes waveAnimation {
+    0% {
+      background-position-x: 0; /* Start at the initial position */
+    }
+    100% {
+      background-position-x: 1000px; /* End position (width of the image) */
+    }
+  }
+  
+  .wave.wave2 {
+    animation: waveAnimation2 40s linear infinite; /* Apply animation */
+    /* z-index: 1000; */
+    opacity: 0.5;
+    animation-delay: 1s;
+    top: 0;
+  }
+  
+  /* Animation for the wave */
+  @keyframes waveAnimation2 {
+    0% {
+      background-position-x: 0; /* Start at the initial position */
+    }
+    100% {
+      background-position-x: -1000px; /* End position (width of the image) */
+    }
+  }
+  

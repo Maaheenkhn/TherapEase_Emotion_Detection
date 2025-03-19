@@ -38,7 +38,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/globals.css'; // Update the import path for header styles
+import '../styles/globals.css'; // Update the import path for header styles
 
 /**
  * Header component for displaying navigation icons.

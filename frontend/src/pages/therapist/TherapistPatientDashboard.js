@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 
 const TherapistPatientDashboard = () => {
   // State variables for MRN and patient data
   const [mrn, setMrn] = useState('');
   const [patientData, setPatientData] = useState(null);
   const [error, setError] = useState('');
+  // const { patientNnumber } = useParams(); // Extract the patient name from the URL
+
 
   // Handle MRN input change
   const handleChange = (e) => {

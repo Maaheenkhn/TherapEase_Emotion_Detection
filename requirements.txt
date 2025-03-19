@@ -2,3 +2,9 @@ Flask
 opencv-python
 deepface
 tf-keras
+Flask-CORS
+Flask-JWT-Extended
+Flask-MySQLdb
+mysql-connector-python
+python-dotenv
+Werkzeug
