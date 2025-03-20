@@ -3,16 +3,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 40%;
-    background: url('/src/wave2.png'); /* Referencing image from public folder */
+    height: 35%;
+    background: url('/src/wave3.png'); /* Referencing image from public folder */
     background-size: 1000px 200px;
     background-repeat: repeat-x;
   }
   
   .wave.wave1 {
-    animation: waveAnimation 20s linear infinite; /* Apply animation */
+    animation: waveAnimation 10s linear infinite; /* Apply animation */
     /* z-index: 1000; */
-    opacity: 1;
+    opacity: 0.9;
     animation-delay: 0s;
     top: 0;
   }

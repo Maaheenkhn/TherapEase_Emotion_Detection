@@ -58,8 +58,8 @@ import TherapistPatients from './pages/therapist/TherapistPatients.js';
 import TherapistAddPatient from './pages/therapist/TherapistAddPatient';
 import TherapistPatientDashboard from './pages/therapist/TherapistPatientDashboard';
 
-import TherapistDeletePatient from './pages/therapist/TherapistDeletePatient';
-import TherapistViewPatient from './pages/therapist/TherapistViewPatient';
+// import TherapistDeletePatient from './pages/therapist/TherapistDeletePatient';
+// import TherapistViewPatient from './pages/therapist/TherapistViewPatient';
 
 import PatientLogin from './pages/patient/PatientLogin';
 import PatientHome from './pages/patient/PatientHome';
@@ -83,8 +83,8 @@ const routes = [
   { path: '/therapist/patients', element: (<PrivateRoute requiredRole="therapist"><TherapistPatients /></PrivateRoute>) },
   { path: '/therapist/add-patient', element: (<PrivateRoute requiredRole="therapist"><TherapistAddPatient /></PrivateRoute>) },
   { path: '/therapist/patient/:patientNumber', element: (<PrivateRoute requiredRole="therapist"><TherapistPatientDashboard /></PrivateRoute>) },
-  { path: '/therapist/delete-patient', element: (<PrivateRoute requiredRole="therapist"><TherapistDeletePatient /></PrivateRoute>) },
-  { path: '/therapist/view-patient', element: (<PrivateRoute requiredRole="therapist"><TherapistViewPatient /></PrivateRoute>) },
+  // { path: '/therapist/delete-patient', element: (<PrivateRoute requiredRole="therapist"><TherapistDeletePatient /></PrivateRoute>) },
+  // { path: '/therapist/view-patient', element: (<PrivateRoute requiredRole="therapist"><TherapistViewPatient /></PrivateRoute>) },
 
   // Patient Routes
   { path: '/patient/login', element: <PatientLogin /> },

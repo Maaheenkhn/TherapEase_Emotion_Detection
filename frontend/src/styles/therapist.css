@@ -104,7 +104,7 @@
 /* Submit button styling */
 .btn-submit {
   width: 100%;
-  padding: 1.5rem; /* Increased padding for a larger button */
+  padding: 1rem; /* Increased padding for a larger button */
   background-color: #2e9292; /* Updated button background color */
   color: #ecf6f6; /* Updated button text color */
   font-size: 1.25rem; /* Increased font size */
@@ -316,6 +316,7 @@
   gap: 8px;
   transition: background-color 0.3s ease;
   border: none; /* Remove default border */
+  margin-left:946px;
 
 }
 
@@ -326,6 +327,211 @@
 .add-patient-btn svg {
   font-size: 20px; /* Size for the plus icon */
 }
+
+
+
+
+/* ---------------dashboard------------- */
+
+
+/* General container for the dashboard page */
+.dashboard-container {
+  background-color: #ecf6f6; /* Light background */
+  height: 100vh; /* Ensure the page takes full height */
+  display: flex; /* Use Flexbox to center content */
+  /* justify-content: center; Center horizontally */
+  /* align-items: center; Center vertically */
+  padding: 2rem; /* Space around content */
+}
+
+
+.patient-dashboard-left{
+  /* padding: 30px; */
+  /* height: 100vh; Ensure the page takes full height */
+  /* display: flex; Use Flexbox to center content */
+  /* justify-content: center; Center horizontally */
+  /* align-items: center; Center vertically */
+  /* max-width: 400px; */
+  
+  /* height: 35%; */
+  
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); */
+  
+  
+/*   
+  width: 25%;
+  margin: 0 auto; */
+  
+
+  width: 80%;
+  height:100%;
+  max-width: 650px;
+  margin: 0 auto; 
+
+  /* padding: 20px; */
+  /* padding-right: 80px; */
+  border-radius: 10px;
+}
+
+
+/* Patient Dashboard Info Styling */
+.patient-dashboard-info {
+  background-color: #fdffff; /* Light gray background */
+  color: #333333; /* Dark text for readability */
+  border-radius: 15px;
+  padding: 30px;
+  /* max-width: 400px; */
+  width: 85%;
+  height: 37%;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.patient-dashboard-info p {
+  margin: 5px 0;
+}
+
+.patient-dashboard-info p strong {
+  color: #2d9796; /* Highlighted color for labels */
+}
+
+
+/* Styling for Header */
+.patient-dashboard-header {
+  font-size: 3.5rem; /* Larger font size for the header */
+  font-weight: bold; /* Make header bold */
+  margin-bottom: 5px; /* Add some space below the header */
+}
+
+.patient-dashboard-header p {
+  margin: 0; /* Remove margin around the paragraph */
+}
+
+
+/* Styling for Details*/
+.patient-dashboard-details{
+  font-size: 1.8rem; /* Larger font size for the header */
+  margin-bottom: 15px;
+}
+
+.patient-dashboard-details p {
+  color: #777777; /* Dark text for readability */
+  margin: 5px 5px;
+}
+
+
+/* Styling for Stats */
+.patient-dashboard-stats {
+  font-size: 1.5rem; /* Larger font size for the header */
+  margin-bottom: 5px;
+}
+
+/* style={{ width: '280px', height: '280px', backgroundColor: '#fdffff' */
+
+
+.patient-dashboard-graphs {
+  width: 100%;
+  height:85%;
+  max-width: 800px;
+  margin-top: 20px;
+  margin-right: 30px;
+  padding: 20px;
+  padding-right: 80px;
+  background-color: #fdffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* -------------session component--------------- */
+
+
+.session-component-container {
+  background-color: #e0f0f0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Space out the content horizontally */
+  padding: 15px;
+  margin-top: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+
+.session-info,
+.session-header  {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Space out the items in the row */
+  width: 100%; /* Take up all available width */
+  align-items: center; /* Vertically center the items in the session-info */
+}
+
+.session-header  {
+margin-top:20px;
+}
+.session-info p {
+  margin: 0; /* Remove default margin */
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 0; /* Optionally remove any padding */
+}
+
+
+
+.session-header p {
+  margin: 0; /* Remove default margin */
+  margin-right: 25px;
+  margin-left: 25px;
+  padding: 10px; 
+}
+
+.session-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.session-total-correct,
+.session-avg-progress {
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* -------------delete--------------- */
@@ -381,21 +587,6 @@
   margin-top: 0.5rem;
 }
 
-/* Submit button styling */
-.btn-submit {
-  background-color: #3182ce; /* Blue background */
-  color: white;
-  padding: 1rem;
-  width: 100%;
-  font-size: 1.25rem;
-  border-radius: 0.375rem;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-submit:hover {
-  background-color: #2b6cb0; /* Darker blue on hover */
-}
 
 /* Modal Overlay (Background) */
 .modal-overlay {
@@ -456,102 +647,3 @@
   background-color: #2b6cb0; /* Darker blue on hover */
 }
 
-
-
-
-
-/* ---------------dashboard------------- */
-
-
-/* General container for the dashboard page */
-.dashboard-container {
-  background-color: #e0f4f6; /* Light background */
-  min-height: 100vh; /* Ensure the page takes full height */
-  display: flex; /* Use Flexbox to center content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 2rem; /* Space around content */
-}
-
-/* Styling for the dashboard card */
-.dashboard-card {
-  background-color: white; /* White background for the card */
-  border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the card */
-  padding: 3rem; /* Add padding inside the card */
-  text-align: center; /* Center text inside the card */
-  width: 80%; /* Make the card responsive */
-  max-width: 600px; /* Ensure the card doesn't get too wide */
-}
-
-/* Title inside the dashboard card */
-.dashboard-card h2 {
-  font-size: 2rem; /* Larger text for the title */
-  font-weight: 600; /* Bold title */
-  color: #374151; /* Dark color for the title */
-  margin-bottom: 1.5rem; /* Space below the title */
-}
-
-/* Title inside the patient information section */
-.patient-info h3 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* Styling for form elements */
-.dashboard-card .form-group {
-  margin-bottom: 1.25rem;
-}
-
-.dashboard-card .form-control {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 0.375rem;
-  border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-/* Styling for error messages */
-.error {
-  color: #e53e3e; /* Red color for error messages */
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-}
-
-.btn-submit {
-  width: 100%;
-  padding: 1rem;
-  background-color: #2e9292; /* Updated button background color */
-  color: #ecf6f6; /* Updated button text color */
-  font-size: 1rem;
-  border: none;
-  border-radius: 0.375rem; /* Adjusts roundness of the button */
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.btn-submit:hover {
-  background-color: #2c7e7e; /* Darker shade on hover */
-}
-
-.btn-submit:active {
-  background-color: #2b6f6f; /* Darker shade on active click */
-}
-
-/* Styling for patient information */
-.patient-info p {
-  font-size: 1.1rem;
-  color: #2d3748;
-}
-
-.patient-info ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.patient-info ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}

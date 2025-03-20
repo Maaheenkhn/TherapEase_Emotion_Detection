@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%; /* Adjust width for center alignment */
+  width: 70%; /* Adjust width for center alignment */
   gap: 20px; /* Gap between rectangles */
 }
 

@@ -12,6 +12,7 @@ const TherapistPatients = () => {
   // State variables for patient data and any error message
   const [patientData, setPatientData] = useState([]);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);  // Track loading state
   const navigate = useNavigate(); // Set up the navigate hook
 
   // // Simulated API call to fetch patients (replace with real API in production)
@@ -78,6 +79,7 @@ const TherapistPatients = () => {
           })
           .then(data => {
             setPatientData(data); // Set the patient data if the fetch is successful
+            setLoading(false);  // Set loading to false after data is fetched
           })
           .catch(error => {
             setError('Failed to load patient data: ' + error.message); // Handle any errors
@@ -113,9 +115,10 @@ const TherapistPatients = () => {
 
       // Fetch the patients when the component is mounted
       fetchPatients();
+
   }, []); // Empty dependency array means this will run once when the component mounts
 
-
+  
 
 
 
@@ -213,18 +216,22 @@ const TherapistPatients = () => {
 
             <div className="patients-list">
                 {/* <PatientComponent patientName="name" patientNumber="0001" /> */}
-                {patientData.length === 0 ? (
-                <p>Loading patient data...</p> // Show loading message until data is fetched
+                {loading ? (
+                  <p>Loading...</p>  // Display loading message while data is being fetched
+                ) : 
+                  patientData.length === 0 ? (
+                <p>No patient data.</p> // Show loading message until data is fetched
                 ) : (
-                patientData.map((patient, index) => (
+                  patientData.map((patient, index) => (
                     <PatientComponent
                     key={index}
                     patientName={patient.firstName}
-                    patientNumber={patient.patientID}
+                    // patientNumber={patient.patientID} 
+                    patientNumber={String(patient.patientID).padStart(4, '0')}
                     onDelete={handleDeletePatient} // Pass the delete handler to PatientComponent
-                    onClick={() => handlePatientClick(patient.number)} // Pass the click handler here
+                    onClick={() => handlePatientClick(patient.patientID)} // Pass the click handler here
                     />
-                ))
+                  ))
                 )}
             </div>
         </div>

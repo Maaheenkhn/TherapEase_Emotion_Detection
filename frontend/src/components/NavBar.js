@@ -69,11 +69,17 @@ const Navbar = () => {
       case '/therapist/add-patient':
         setSelectedItem('Patients');
         break;
+      case /^\/therapist\/patient\/\d+$/.test(window.location.pathname):
+        setSelectedItem('Patients');
+        break;
       case '/therapist/profile':
         setSelectedItem('Profile');
         break;
       default:
         setSelectedItem(null); // Reset if no match
+    }
+    if (/^\/therapist\/patient\/\d+$/.test(window.location.pathname)) {
+      setSelectedItem('Patients');
     }
   }, [location.pathname]); // Re-run effect when the path changes
 

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/NavBar';
 import profileImage from '../../profile.png';  // Adjust path accordingly
@@ -13,12 +13,17 @@ const TherapistHome = () => {
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const currentDay = new Date().getDay(); // Returns 0 for Sunday, 1 for Monday, etc.
   const dayName = daysOfWeek[currentDay]; // Get the day name (e.g., Monday, Tuesday)
+  const [therapistName, setTherapistName] = useState(''); // State to store therapist name
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');  // You may have stored it differently
+    if (token) {
+      const decodedToken = jwt_decode(token);
+      const name = decodedToken.sub.name;  // Assuming 'name' is in the JWT
+      setTherapistName(name); // Set the therapist name state
+    }
+  }, []); // Empty dependency array means this effect runs once when the component mounts
 
-
-  const token = localStorage.getItem('token');  // You may have stored it differently
-  const decodedToken = jwt_decode(token);
-  const therapistName= decodedToken.sub.name;  // Assuming 'email' is a property in the JWT
   
   const handleEditClick = () => {
     navigate('/therapist/profile'); // Navigate to the profile page when the button is clicked
