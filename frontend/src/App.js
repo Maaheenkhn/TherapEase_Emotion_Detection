@@ -27,9 +27,6 @@
 // export default App;
 
 
-
-
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -43,22 +40,41 @@ import PageWrapper from "./components/PageWrapper";
  */
 const AnimatedRoutes = () => {
   const location = useLocation();
+  
+  // Log the current location pathname to check route changes
+  console.log("Current Path:", location.pathname);
+
+  // List of routes that should not have animation
+  const noAnimationRoutes = ['/patient/home']; // Add the routes you want to exclude here
 
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={<PageWrapper>{route.element}</PageWrapper>} />
-        ))}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </AnimatePresence>
-  );
+    <Routes location={location} key={location.pathname}>
+      {routes.map((route, index) => {
+        // Check if the current route path is in the list of routes that should not have animation
+        const shouldAnimate = !noAnimationRoutes.includes(location.pathname);
 
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              shouldAnimate ? (
+                <AnimatePresence mode="wait">
+                  <PageWrapper>{route.element}</PageWrapper>
+                </AnimatePresence>
+              ) : (
+                route.element
+              )
+            }
+          />
+        );
+      })}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 };
 
 const App = () => {
-
   return (
     <AuthProvider>
       <Router>
@@ -71,9 +87,6 @@ const App = () => {
 };
 
 export default App;
-
-
-
 
 
 

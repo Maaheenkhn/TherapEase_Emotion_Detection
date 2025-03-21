@@ -41,20 +41,21 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation(); // Get the current location
 
-  // Function to handle item clicks
+  
+
+  const { logout } = useAuth(); // Use AuthContext to get user details and logout function
+
+  const handleLogout = () => {
+      logout(); // Log out the user
+      navigate('/'); // Redirect to login page
+  };
+  
+  
+// Function to handle item clicks
   const handleItemClick = (item, path) => {
     setSelectedItem(item);
     navigate(path);
   };
-
-      const { logout } = useAuth(); // Use AuthContext to get user details and logout function
-  
-      const handleLogout = () => {
-          logout(); // Log out the user
-          navigate('/'); // Redirect to login page
-      };
-  
-
 
   // Effect to set the selected item based on the current URL path
   useEffect(() => {

@@ -1,24 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, Button, TextField, Box, Typography, Divider, IconButton } from '@mui/material';
 import { Edit as EditIcon } from '@mui/icons-material';
 import Navbar from '../../components/NavBar';
 import profileImage from '../../profile.png';  // Adjust path accordingly
+import { jwtDecode as jwt_decode } from 'jwt-decode';
+import { useAuth } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom'; // Import useLocation
 
 
 
 const TherapistProfilePage = () => {
   // States for the profile details
   //load all this from DB *******************
-  const [selectedOption, setSelectedOption] = useState('personalDetails');
+  const navigate = useNavigate();
+
   const [profilePicture, setProfilePicture] = useState(profileImage); // Sample image URL
-  const [firstName, setFirstName] = useState('John');
-  const [lastName, setLastName] = useState('Doe');
-  const [dob, setDob] = useState('1990-01-01');
+  const [selectedOption, setSelectedOption] = useState('personalDetails');
   const [bio, setBio] = useState('A short bio about the therapist.');
-  const [email, setEmail] = useState('john.doe@example.com');
-  const [password, setPassword] = useState('password123');
+  const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [dob, setDob] = useState('1990-01-01');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+// Get the JWT token from localStorage or wherever it's stored
+const token = localStorage.getItem('token');  // You may have stored it differently
+
+const { logout } = useAuth(); // Use AuthContext to get user details and logout function
+
+const handleLogout = () => {
+    logout(); // Log out the user
+    navigate('/'); // Redirect to login page
+};
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      if (!token) {
+        throw new Error('Token not found!');
+      }
+      
+      // Decode the JWT token to extract therapist email
+      const decodedToken = jwt_decode(token);
+      const therapistEmail = decodedToken.sub.email;  // Assuming 'email' is a property in the JWT
+
+      // Fetch therapist data by sending the email to the API
+      const response = await fetch('http://localhost:5000/api/therapist/get-data', {
+        method: 'POST',  // POST method to send email in the body
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, // Authorization token
+        },
+        body: JSON.stringify({
+          email: therapistEmail,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+
+      const data = await response.json();
+
+      // Assuming the API returns an object with the same fields
+      setFirstName(data.firstName);
+      setLastName(data.lastName);
+      setDob(data.dob);
+      setEmail(data.email);
+      setPassword(data.password); // Be cautious with handling sensitive data like passwords
+    } catch (error) {
+      console.error('Error fetching therapist data:', error);
+    }
+  };
+
+  fetchData();
+}, [token]); // Runs whenever the token changes (on mount)
 
 
   // Handler for changing the profile picture
@@ -45,33 +106,85 @@ const TherapistProfilePage = () => {
     if (newPassword !== confirmPassword) {
       alert('Passwords do not match!');
     } else {
-      setPassword(newPassword);  // Update password to the new one
-      setNewPassword('');
-      setConfirmPassword('');
-      alert('Password changed successfully!');
-      setSelectedOption('loginDetails');  // Go back to login details after submission
+      // Make the API call to update the password
+      fetch('http://localhost:5000/api/therapist/update-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,         // Therapist's email to identify the user
+          oldPassword,   // Therapist's old password
+          newPassword,   // New password
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.message) {
+          alert('Password changed successfully!');
+          setPassword(newPassword);  // Update the password state with the new one
+          setNewPassword('');
+          setConfirmPassword('');
+          setSelectedOption('loginDetails');  // Go back to login details section
+        } else {
+          alert('Error updating password: ' + data.error);
+        }
+      })
+      .catch((error) => {
+        console.error('Error updating password:', error);
+        alert('Failed to update password.');
+      });
     }
   };
+  
 
 
 
-  // Placeholder API call function (for simulating the database update)
+  // // Placeholder API call function (for simulating the database update)
+  // const updateProfileInDatabase = () => {
+  //   // Uncomment the code below when integrating with an actual API
+  //   /*
+  //   fetch('/api/updateProfile', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       profilePicture,
+  //       firstName,
+  //       lastName,
+  //       dob,
+  //       bio,
+  //       email,
+  //       password, // You may decide if you want to update password here
+  //     }),
+  //   })
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     console.log('Profile updated successfully:', data);
+  //     alert('Profile updated successfully!');
+  //   })
+  //   .catch((error) => {
+  //     console.error('Error updating profile:', error);
+  //     alert('Failed to update profile.');
+  //   });
+  //   */
+  //   alert('Profile updated (simulated)');
+  // };
+
+
+
   const updateProfileInDatabase = () => {
-    // Uncomment the code below when integrating with an actual API
-    /*
-    fetch('/api/updateProfile', {
+    fetch('http://localhost:5000/api/therapist/update-profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        profilePicture,
-        firstName,
-        lastName,
-        dob,
-        bio,
         email,
-        password, // You may decide if you want to update password here
+        firstName,       // therapist's first name
+        lastName,        // therapist's last name
+        dob,             // therapist's date of birth
       }),
     })
     .then(response => response.json())
@@ -83,9 +196,8 @@ const TherapistProfilePage = () => {
       console.error('Error updating profile:', error);
       alert('Failed to update profile.');
     });
-    */
-    alert('Profile updated (simulated)');
   };
+  
 
 
   return (
@@ -163,8 +275,9 @@ const TherapistProfilePage = () => {
               Login Details
             </Button>
 
+  
             <Button
-              onClick={() => alert('Logged out')}
+              onClick={() => handleLogout()}
               fullWidth
               sx={{
                 color: '#389c9b',
@@ -306,6 +419,7 @@ const TherapistProfilePage = () => {
                 label="Password"
                 fullWidth
                 value={password}
+                type="password"
                 disabled
                 margin="normal"
               />
@@ -333,6 +447,8 @@ const TherapistProfilePage = () => {
                 label="Current Password"
                 fullWidth
                 type="password"
+                value={oldPassword}
+                onChange={(e) => setOldPassword(e.target.value)}
                 margin="normal"
               />
               <TextField

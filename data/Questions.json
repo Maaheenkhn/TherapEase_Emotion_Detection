@@ -1,0 +1,452 @@
+[
+    {
+        "Question": "Which object is heavier?",
+        "A": "Feather",
+        "B": "Rock",
+        "C": "Paper",
+        "D": "Wood",
+        "Difficulty": "Easy",
+        "Correct Answer": "Rock"
+    },
+    {
+        "Question": "Which object is different from the others?",
+        "A": "Circle",
+        "B": "Square",
+        "C": "Triangle",
+        "D": "Star",
+        "Difficulty": "Medium",
+        "Correct Answer": "Square"
+    },
+    {
+        "Question": "Which object looks different?",
+        "A": "Ball",
+        "B": "Cube",
+        "C": "Cylinder",
+        "D": "Sphere",
+        "Difficulty": "Medium",
+        "Correct Answer": "Cube"
+    },
+    {
+        "Question": "Which shape does not belong?",
+        "A": "Square",
+        "B": "Triangle",
+        "C": "Circle",
+        "D": "Star",
+        "Difficulty": "Medium",
+        "Correct Answer": "Triangle"
+    },
+    {
+        "Question": "What comes next in the sequence?",
+        "A": "Circle",
+        "B": "Star",
+        "C": "Triangle",
+        "D": "Square",
+        "Difficulty": "Hard",
+        "Correct Answer": "Star"
+    },
+    {
+        "Question": "What comes next in the sequence:",
+        "A": "Star",
+        "B": "Square",
+        "C": "Triangle",
+        "D": "Circle",
+        "Difficulty": "Hard",
+        "Correct Answer": "Circle"
+    },
+    {
+        "Question": "What color is the apple?",
+        "A": "Blue",
+        "B": "Purple",
+        "C": "Red",
+        "D": "Yellow",
+        "Difficulty": "Easy",
+        "Correct Answer": "Red"
+    },
+    {
+        "Question": "Select the object that is bigger:",
+        "A": "Small ball",
+        "B": "Medium ball",
+        "C": "Large ball",
+        "D": "Extra large ball",
+        "Difficulty": "Easy",
+        "Correct Answer": "Large ball"
+    },
+    {
+        "Question": "Which one has 3 apples?",
+        "A": "1 apple",
+        "B": "2 apples",
+        "C": "3 apples",
+        "D": "4 apples",
+        "Difficulty": "Easy",
+        "Correct Answer": "3"
+    },
+    {
+        "Question": "Which of these shapes is a square?",
+        "A": "Circle",
+        "B": "Square",
+        "C": "Triangle",
+        "D": "Star",
+        "Difficulty": "Easy",
+        "Correct Answer": "Square"
+    },
+    {
+        "Question": "Which of these shows a scared face?",
+        "A": "Happy",
+        "B": "Sad",
+        "C": "Scared",
+        "D": "Angry",
+        "Difficulty": "Easy",
+        "Correct Answer": "Scared"
+    },
+    {
+        "Question": "What is the total number of objects if you add 2 circles and 3 squares?",
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7",
+        "Difficulty": "Hard",
+        "Correct Answer": "5"
+    },
+    {
+        "Question": "Which picture shows the bigger object?",
+        "A": "Small cup",
+        "B": "Large cup",
+        "C": "Medium cup",
+        "D": "Extra large cup",
+        "Difficulty": "Easy",
+        "Correct Answer": "Large cup"
+    },
+    {
+        "Question": "Which of these is a fruit?",
+        "A": "Banana",
+        "B": "Car",
+        "C": "Chair",
+        "D": "Shoe",
+        "Difficulty": "Easy",
+        "Correct Answer": "Banana"
+    },
+    {
+        "Question": "What sound does a dog make?",
+        "A": "Meow",
+        "B": "Bark",
+        "C": "Roar",
+        "D": "Quack",
+        "Difficulty": "Easy",
+        "Correct Answer": "Bark"
+    },
+    {
+        "Question": "Which color is the apple?",
+        "A": "Red",
+        "B": "Blue",
+        "C": "Green",
+        "D": "Yellow",
+        "Difficulty": "Easy",
+        "Correct Answer": "Red"
+    },
+    {
+        "Question": "Which of these is a circle?",
+        "A": "Circle",
+        "B": "Triangle",
+        "C": "Square",
+        "D": "Star",
+        "Difficulty": "Easy",
+        "Correct Answer": "Circle"
+    },
+    {
+        "Question": "Select the picture of a flower.",
+        "A": "Flower",
+        "B": "Tree",
+        "C": "Car",
+        "D": "House",
+        "Difficulty": "Easy",
+        "Correct Answer": "Flower"
+    },
+    {
+        "Question": "Which group of objects shows the same color?",
+        "A": "Red ball, red apple",
+        "B": "Blue pen, yellow car",
+        "C": "Green tree, pink flower",
+        "D": "Black book, white book",
+        "Difficulty": "Hard",
+        "Correct Answer": "Red ball, red apple"
+    },
+    {
+        "Question": "Which number is bigger?",
+        "A": "5",
+        "B": "10",
+        "C": "2",
+        "D": "7",
+        "Difficulty": "Easy",
+        "Correct Answer": "10"
+    },
+    {
+        "Question": "What is the first thing you do when you wake up in the morning?",
+        "A": "Brush your teeth",
+        "B": "Go to sleep",
+        "C": "Eat dinner",
+        "D": "Play outside",
+        "Difficulty": "Hard",
+        "Correct Answer": "Brush your teeth"
+    },
+    {
+        "Question": "If you are cold, you feel:",
+        "A": "Warm",
+        "B": "Sad",
+        "C": "Cold",
+        "D": "Hot",
+        "Difficulty": "Easy",
+        "Correct Answer": "Cold"
+    },
+    {
+        "Question": "What would you use to drink water?",
+        "A": "Spoon",
+        "B": "Cup",
+        "C": "Plate",
+        "D": "Fork",
+        "Difficulty": "Medium",
+        "Correct Answer": "Cup"
+    },
+    {
+        "Question": "If you are happy, you _____.",
+        "A": "Cry",
+        "B": "Smile",
+        "C": "Yell",
+        "D": "Hide",
+        "Difficulty": "Easy",
+        "Correct Answer": "Smile"
+    },
+    {
+        "Question": "Complete the sentence: \"\"The sky is _____.\"\"",
+        "A": "Green",
+        "B": "Yellow",
+        "C": "Blue",
+        "D": "Orange",
+        "Difficulty": "Medium",
+        "Correct Answer": "Blue"
+    },
+    {
+        "Question": "Which item doesn’t belong in the group:",
+        "A": "Dog",
+        "B": "Cat",
+        "C": "Bird",
+        "D": "Apple",
+        "Difficulty": "Hard",
+        "Correct Answer": "Apple"
+    },
+    {
+        "Question": "Which number is missing? 5, 10, __, 20",
+        "A": "25",
+        "B": "30",
+        "C": "15",
+        "D": "5",
+        "Difficulty": "Medium",
+        "Correct Answer": "15"
+    },
+    {
+        "Question": "Find the pattern: Red, Blue, Red, Blue, __?",
+        "A": "Red",
+        "B": "Green",
+        "C": "Blue",
+        "D": "Yellow",
+        "Difficulty": "Medium",
+        "Correct Answer": "Red"
+    },
+    {
+        "Question": "What emotion do you feel when you lose something important?",
+        "A": "Frustrated",
+        "B": "Happy",
+        "C": "Excited",
+        "D": "Bored",
+        "Difficulty": "Hard",
+        "Correct Answer": "Frustrated"
+    },
+    {
+        "Question": "If someone is crying, they are feeling:",
+        "A": "Happy",
+        "B": "Sad",
+        "C": "Excited",
+        "D": "Scared",
+        "Difficulty": "Medium",
+        "Correct Answer": "Sad"
+    },
+    {
+        "Question": "If you are at a traffic light and see a red light, you should:",
+        "A": "Stop",
+        "B": "Go",
+        "C": "Turn left",
+        "D": "Walk",
+        "Difficulty": "Medium",
+        "Correct Answer": "Stop"
+    },
+    {
+        "Question": "What time is it if the clock says 12:00?",
+        "A": "Midnight",
+        "B": "Noon",
+        "C": "Morning",
+        "D": "Evening",
+        "Difficulty": "Medium",
+        "Correct Answer": "Noon"
+    },
+    {
+        "Question": "Which comes next in the pattern: Red, Green, Red, Green, ___?",
+        "A": "Red",
+        "B": "Blue",
+        "C": "Yellow",
+        "D": "Green",
+        "Difficulty": "Medium",
+        "Correct Answer": "Red"
+    },
+    {
+        "Question": "If you’re not sure how to play a game, you should:",
+        "A": "Ask for help",
+        "B": "Get mad",
+        "C": "Leave the game",
+        "D": "Stop playing",
+        "Difficulty": "Medium",
+        "Correct Answer": "Ask for help"
+    },
+    {
+        "Question": "If someone is scared, you should:",
+        "A": "Ask them if they are okay",
+        "B": "Run away",
+        "C": "Ignore them",
+        "D": "Scare them more",
+        "Difficulty": "Hard",
+        "Correct Answer": "Ask them if they are okay"
+    },
+    {
+        "Question": "Fill in the blank: \"\"When you are thirsty, you drink ____.\"\"",
+        "A": "Food",
+        "B": "Water",
+        "C": "Sand",
+        "D": "Paper",
+        "Difficulty": "Hard",
+        "Correct Answer": "Water"
+    },
+    {
+        "Question": "If you’re upset, what’s a way to calm down?",
+        "A": "Take deep breaths",
+        "B": "Get more upset",
+        "C": "Run away",
+        "D": "Scream",
+        "Difficulty": "Hard",
+        "Correct Answer": "Take deep breaths"
+    },
+    {
+        "Question": "What is something you can do if you’re feeling sad?",
+        "A": "Talk to a friend",
+        "B": "Yell at someone",
+        "C": "Keep it to yourself",
+        "D": "Ignore it",
+        "Difficulty": "Hard",
+        "Correct Answer": "Talk to a friend"
+    },
+    {
+        "Question": "Which word best describes something soft?",
+        "A": "Rock",
+        "B": "Pillow",
+        "C": "Tree",
+        "D": "Brick",
+        "Difficulty": "Hard",
+        "Correct Answer": "Pillow"
+    },
+    {
+        "Question": "What is something you use every day but can’t touch?",
+        "A": "Air",
+        "B": "Bed",
+        "C": "Pen",
+        "D": "Food",
+        "Difficulty": "Hard",
+        "Correct Answer": "Air"
+    },
+    {
+        "Question": "What word means the same as \"\"happy\"\"?",
+        "A": "Sad",
+        "B": "Angry",
+        "C": "Glad",
+        "D": "Tired",
+        "Difficulty": "Medium",
+        "Correct Answer": "Glad"
+    },
+    {
+        "Question": "What do you say when someone gives you a gift?",
+        "A": "Goodbye",
+        "B": "Thank you",
+        "C": "Yes, please",
+        "D": "No, thanks",
+        "Difficulty": "Easy",
+        "Correct Answer": "Thank you"
+    },
+    {
+        "Question": "Solve the problem: 2 + 3 = __?",
+        "A": "4",
+        "B": "6",
+        "C": "5",
+        "D": "2",
+        "Difficulty": "Medium",
+        "Correct Answer": "5"
+    },
+    {
+        "Question": "What comes next? 1, 2, __?",
+        "A": "4",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "Difficulty": "Easy",
+        "Correct Answer": "3"
+    },
+    {
+        "Question": "How do you feel when someone gives you a gift?",
+        "A": "Angry",
+        "B": "Surprised",
+        "C": "Happy",
+        "D": "Confused",
+        "Difficulty": "Easy",
+        "Correct Answer": "Happy"
+    },
+    {
+        "Question": "What should you say if you accidentally bump into someone?",
+        "A": "Ouch",
+        "B": "Sorry",
+        "C": "Go away",
+        "D": "Hi",
+        "Difficulty": "Easy",
+        "Correct Answer": "Sorry"
+    },
+    {
+        "Question": "What is the opposite of “hot”?",
+        "A": "Cold",
+        "B": "Warm",
+        "C": "Big",
+        "D": "Small",
+        "Difficulty": "Easy",
+        "Correct Answer": "Cold"
+    },
+    {
+        "Question": "Where would you find a chair?",
+        "A": "Kitchen",
+        "B": "Bathroom",
+        "C": "Bedroom",
+        "D": "Living room",
+        "Difficulty": "Medium",
+        "Correct Answer": "Living room"
+    },
+    {
+        "Question": "What do you need to do first to bake a cake?",
+        "A": "Eat the cake",
+        "B": "Bake the cake",
+        "C": "Buy ingredients",
+        "D": "Decorate the cake",
+        "Difficulty": "Medium",
+        "Correct Answer": "Buy ingredients"
+    },
+    {
+        "Question": "What do you feel if you lose a game?",
+        "A": "Happy",
+        "B": "Sad",
+        "C": "Excited",
+        "D": "Angry",
+        "Difficulty": "Easy",
+        "Correct Answer": "Sad"
+    }
+]
